@@ -1,13 +1,59 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Source+Sans+3:wght@400;600;700&display=swap');
+
+html,
+body,
+#root,
+.app{
+    height: 100%;
+    width: 100%;
+    font-family: "Inter", sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+.dashboard-container {
+    display: grid;
+    grid-template-areas:
+      "title charts";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 16px;
+    margin: 16px;
+  }
+  
+  .dashboard-title {
+    grid-area: title;
+    font-size: 24px;
+  }
+  
+  .charts-container {
+    grid-area: charts;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  
+  .chart {
+    border: 1px solid #ccc;
+    padding: 16px;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  /* Media query for mobile responsiveness */
+  @media (max-width: 768px) {
+    .dashboard-container {
+      grid-template-areas:
+        "title"
+        "charts";
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto;
+    }
+  
+    .charts-container {
+      grid-template-columns: 1fr;
+      gap: 8px;
+    }
+  }
+  
