@@ -13,6 +13,11 @@ import Interaction from "scenes/interaction"
 import Completion from "scenes/completion"
 import Grades from "scenes/grades";
 import Rates from "scenes/rates"
+import ModuleGrades from "scenes/module-grades"
+import ViewGrades from "scenes/module-grades/module-grades"
+import NoInstructorCourse from "scenes/no-instructor"
+import InstructorUssage from "scenes/instructor-ussage"
+import CourseContent from "scenes/instructor-ussage/course-content"
 import UserStore from "stores/UserStore";
 
 function App() {
@@ -35,6 +40,11 @@ function App() {
                 <Route path="/completion" element={<Completion/>} />
                 <Route path="/grades" element={<Grades/>} />
                 <Route path="/rates" element={<Rates/>} />
+                <Route path="/module-grades" element={<ModuleGrades/>} />
+                <Route path="/view/grades" element={<ViewGrades/>} />
+                <Route path="/no-instructor/courses" element={<NoInstructorCourse/>} />
+                <Route path="/instructor-ussage" element={<InstructorUssage/>} />
+                <Route path="/course-content" element={<CourseContent/>} />
               </Route>
             </Routes>
           </ThemeProvider>

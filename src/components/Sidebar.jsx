@@ -16,6 +16,7 @@ import {
   SettingsOutlined,
   SettingOutLined,
   ChevronLeft,
+  Person,
   HomeOutline,
   Groups2Outlined,
   ReceiptLongOutlined,
@@ -46,34 +47,41 @@ const navItems = [
   {
     text: "Dashboard",
     icon: <Home />,
+    path: "dashboard"
   },
   {
     text: "Student Activities",
     icon: null,
+    path: "student/activities"
   },
   {
     text: "Overview",
     icon: <ArticleOutlined />,
+    path: "overview"
   },
   {
     text: "Sessions",
     icon: <PeopleAltOutlined />,
+    path: "sessions"
   },
   {
     text: "Course Content Tracking",
-    icon: null,
+    icon: null
   },
   {
     text: "Contents",
     icon: <AssignmentOutlined />,
+    path: "contents"
   },
   {
     text: "Interaction",
     icon: <TrendingUpOutlined />,
+    path: "interaction"
   },
   {
     text: "Completion",
     icon: <AnalyticsOutlined />,
+    path: "completion"
   },
   {
     text: "Assessment Tracking",
@@ -82,6 +90,37 @@ const navItems = [
   {
     text: "Grades",
     icon: <GradingOutlined />,
+    path: "grades"
+  },
+  {
+    text: "Monitoring Tools",
+    icon: null,
+    path: "monitoring"
+  },
+  {
+    text: "Module Grades",
+    icon: <MenuBookOutlined />,
+    path: "module-grades"
+  },
+  // {
+  //   text: "Course Contents",
+  //   icon: <AssessmentOutlined />,
+  //   path: "course content"
+  // },
+  {
+    text: "No Instructor Courses",
+    icon: <MenuBookOutlined />,
+    path: "no-instructor/courses"
+  },
+  {
+    text: "Instructor Ussage",
+    icon: <Person />,
+    path: "instructor-ussage"
+  },
+  {
+    text: "Access Pattern",
+    icon: <PieChartOutlined />,
+    path: "access-pattern"
   },
 ];
 
@@ -138,7 +177,7 @@ const Sidebar = ({
               </FlexBetween>
             </Box>
             <List>
-              {navItems.map(({ text, icon }) => {
+              {navItems.map(({ text, icon, path }) => {
                 if (!icon) {
                   return (
                     <Typography key={text} sx={{ m: "2.25rem 0 1rem 3rem" }}>
@@ -146,7 +185,7 @@ const Sidebar = ({
                     </Typography>
                   );
                 }
-                const lcText = text.toLowerCase();
+                const lcText = path;
 
                 return (
                   <ListItem key={text} disablePadding>
