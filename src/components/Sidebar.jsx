@@ -37,6 +37,7 @@ import {
   Home,
   ChevronRightOutlined,
 } from "@mui/icons-material";
+import SpeakerNotesOffIcon from '@mui/icons-material/SpeakerNotesOff';
 import { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import FlexBetween from "./FlexBetween";
@@ -109,7 +110,7 @@ const navItems = [
   // },
   {
     text: "No Instructor Courses",
-    icon: <MenuBookOutlined />,
+    icon: <SpeakerNotesOffIcon />,
     path: "no-instructor/courses"
   },
   {
@@ -117,11 +118,7 @@ const navItems = [
     icon: <Person />,
     path: "instructor-ussage"
   },
-  {
-    text: "Access Pattern",
-    icon: <PieChartOutlined />,
-    path: "access-pattern"
-  },
+  
 ];
 
 const Sidebar = ({
