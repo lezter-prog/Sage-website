@@ -56,4 +56,14 @@ body,
       gap: 8px;
     }
   }
+
+  .ag-theme-default {
+    --ag-foreground-color:white;
+    --ag-background-color: '#1a1a1a';
+    --ag-header-foreground-color:white;
+    
+
+    --ag-font-size: 17px;
+    --ag-font-family: monospace;
+}
   
